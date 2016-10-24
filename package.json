@@ -1,0 +1,22 @@
+{
+  "name": "url_shortener",
+  "version": "1.0.0",
+  "description": "An API that takes a URL and shortens it for easier use.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-holcom/URL_Shortener.git"
+  },
+  "author": "Kimerlee Holcom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/k-holcom/URL_Shortener/issues"
+  },
+  "homepage": "https://github.com/k-holcom/URL_Shortener#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
