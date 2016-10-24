@@ -1,7 +1,5 @@
 #URL_Shortener
 
-Installation
-============
+##Installation
 
-Endpoints
-=========
+##Endpoints
