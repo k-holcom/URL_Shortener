@@ -11,6 +11,9 @@ module.exports = (express) => {
     var short = '';
     var str = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
+    // Getting the information from the "body"
+
+
     //Sets up the end of the shortened URL
     for(var i = 0; i < 6; i++){
       var rand = Math.floor(Math.random() * (62 - 0) + 0);
