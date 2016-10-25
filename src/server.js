@@ -22,6 +22,6 @@ app.use(body_parser.urlencoded({
 app.use('/api/v1', require('./routes/routes.js')(express));
 
 // Setting up the actual Server
-app.listen(port, function(){
+exports.server = app.listen(port, () => {
   console.log('Server Active on Port', port);
 });
