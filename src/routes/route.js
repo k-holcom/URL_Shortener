@@ -12,6 +12,8 @@ module.exports = (express) => {
 
   api.use('/api/v1/', require('./api/url')(express));
 
+  api.use('/', require('./api/goTo')(express));
+
   //Returns the API
   return api;
 }

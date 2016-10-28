@@ -24,10 +24,7 @@ module.exports = (express) => {
       short = short + char;
     }
 
-    //creates the shortened url
-    var shortened = 'phnx.wd/' + short;
-
-    var info = {url: req.body.url, short: shortened}
+    var info = {url: req.body.url, short: short}
 
     url.add(info, (err) => {
       res.status(500).json(err);
@@ -76,11 +73,8 @@ module.exports = (express) => {
       short = short + char;
     }
 
-    //creates the shortened url
-    var shortened = 'phnx.wd/' + short;
-
     req.body.url = req.body.url;
-    req.body.short = shortened;
+    req.body.short = short;
 
     url.update(req.body, (err) => {
       res.status(500).json(err);
