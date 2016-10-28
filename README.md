@@ -24,4 +24,8 @@ And once this has been installed, run the command:
 ##Endpoints
 | METHOD | ENDPOINT | OUTPUT |
 | :----: | :------: | :----: |
-| POST | /api/v1/url | {"url": "www.risingphoenixwd.com", "string": "phnx.wd/UqReIX"} |
+| POST(create) | /api/v1/url | {"url": "www.risingphoenixwd.com", "string": "phnx.wd/UqReIX"} |
+| GET | /api/v1/urls | {"id": 1, "url": "www.facebook.com", "short": "phnx.wd/umbfPO", "createdAt": "2016-10-26T19:37:09.000Z", "updatedAt": "2016-10-28T18:57:15.000Z"},{"id": 2, "url": "www.google.com", "short": "phnx.wd/QAtxn9", "createdAt": "2016-10-26T19:37:35.000Z", "updatedAt": "2016-10-26T19:37:35.000Z"},{"id": 4, "url": "www.risingphoenixwd.com", "short": "phnx.wd/ia22aP", "createdAt": "2016-10-28T19:01:09.000Z", "updatedAt": "2016-10-28T19:01:09.000Z"} |
+| GET | /api/v1/urls/:id | {"id": 1, "url": "www.facebook.com", "short": "phnx.wd/umbfPO", "createdAt": "2016-10-26T19:37:09.000Z", "updatedAt": "2016-10-28T18:57:15.000Z"} |
+| POST(update) | /api/v1/urls/:id | {"id": 1, "url": "www.facebook.com", "string": "phnx.wd/UqReIX"} |
+| DELETE | /api/v1/urls/:id |  |

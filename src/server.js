@@ -19,7 +19,7 @@ app.use(body_parser.urlencoded({
 }));
 
 //Configure Routes
-app.use('/api/v1', require('./routes/routes.js')(express));
+app.use('/', require('./routes/route.js')(express));
 
 // Setting up the actual Server
 exports.server = app.listen(port, () => {

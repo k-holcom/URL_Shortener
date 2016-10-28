@@ -4,7 +4,13 @@ module.exports = (express) => {
   const api = express.Router();
 
   //URL Route
-  api.use('/test', require('./api/url.js')(express));
+  api.get('/status', (req, res) => {
+    res.json({
+      healthy: true
+    })
+  });
+
+  api.use('/api/v1/', require('./api/url')(express));
 
   //Returns the API
   return api;

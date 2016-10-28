@@ -1,23 +1,28 @@
 {
-  "name": "url_shortener",
+  "name": "new_project",
   "version": "1.0.0",
-  "description": "An API that takes a URL and shortens it for easier use.",
+  "description": "",
   "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k-holcom/URL_Shortener.git"
+    "url": "git+https://github.com/k-holcom/New-Project.git"
   },
-  "author": "Kimerlee Holcom",
+  "author": "Holcom",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/k-holcom/URL_Shortener/issues"
+    "url": "https://github.com/k-holcom/New-Project/issues"
   },
-  "homepage": "https://github.com/k-holcom/URL_Shortener#readme",
+  "homepage": "https://github.com/k-holcom/New-Project#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "mysql": "^2.11.1",
+    "sequelize": "^3.24.6"
+  },
+  "devDependencies": {
+    "dotenv": "^2.0.0"
   }
 }
