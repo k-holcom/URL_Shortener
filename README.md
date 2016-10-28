@@ -26,7 +26,7 @@ The Shortened URL is only shown by the part that would show up after phnx.wd/.
 
 | METHOD | ENDPOINT | OUTPUT |
 | :----: | :------: | :----: |
-| POST(create) | /api/v1/url | {"url": "www.risingphoenixwd.com", "string": "} |
+| POST(create) | /api/v1/url | {"url": "www.risingphoenixwd.com", "short": ia22aP"} |
 | GET | /api/v1/urls | {"id": 1, "url": "www.facebook.com", "short": umbfPO", "createdAt": "2016-10-26T19:37:09.000Z", "updatedAt": "2016-10-28T18:57:15.000Z"},{"id": 2, "url": "www.google.com", "short": QAtxn9", "createdAt": "2016-10-26T19:37:35.000Z", "updatedAt": "2016-10-26T19:37:35.000Z"},{"id": 4, "url": "www.risingphoenixwd.com", "short": ia22aP", "createdAt": "2016-10-28T19:01:09.000Z", "updatedAt": "2016-10-28T19:01:09.000Z"} |
 | GET | /api/v1/urls/:id | {"id": 1, "url": "www.facebook.com", "short": umbfPO", "createdAt": "2016-10-26T19:37:09.000Z", "updatedAt": "2016-10-28T18:57:15.000Z"} |
 | POST(update) | /api/v1/urls/:id | {"id": 1, "url": "www.facebook.com", "string": "UqReIX"} |
