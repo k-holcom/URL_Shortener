@@ -64,4 +64,4 @@ When the debugging is turned off and the messages are output to a .log file, the
 ##Code-Styling
 For this API, I try to follow the AirBnb style guide. This ensures that all files and users use the same code formatting. It also is a guide to help keep things in order and keep everyone on the same page.
 
-For more information, please visit their github repository at (https://github.com/airbnb/javascript).
+For more information, please visit their github repository at https://github.com/airbnb/javascript.
