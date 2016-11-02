@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 
 // Connecting to the Database
-
+/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 require('dotenv').config();
 
 const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
