@@ -5,6 +5,7 @@ module.exports = (express) => {
 
   //URL Route
   api.get('/status', (req, res) => {
+    console.log('The /status route has been hit');
     res.json({
       healthy: true
     })

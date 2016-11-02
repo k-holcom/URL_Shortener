@@ -1,9 +1,25 @@
+//Function to suppress console.log messages and print to a file
+suppress = (msg) => {
+  var debugVar = process.env.DEBUG;
+  var date = new Date().toISOString();
+  var message = date + ' => ' + msg + '\r\n';
+  if(debugVar == 'true'){
+    console.log(message);
+  }else if(debugVar == 'false'){
+    var fs = require('fs');
+    fs.appendFile('./logs/debugLog.log', message, (err) => {
+      if(err) throw err;
+    });
+  }
+}
+
 //Setting up the Module for URL Routes
 const url = require('../../models/url.js');
 module.exports = (express) => {
   //creates the api
   const api = express.Router();
-
+  //Sends a message stating when each call is started successfully
+  suppress('Started Successfully!')
   //Adds the URL to the Database
   api.post('/url', (req, res) => {
     //This is the variable that will hold the random information that will follow phnx.wd
@@ -23,12 +39,14 @@ module.exports = (express) => {
       //Adds the character to the variable short
       short = short + char;
     }
-
+    suppress('Shortened URL for ' + req.body.url + ' will be: phnx.wd/' + short);
     var info = {url: req.body.url, short: short}
 
     url.add(info, (err) => {
+      suppress('There was an Error: ' + err);
       res.status(500).json(err);
     }, (data) => {
+      suppress('Shortened URL Added');
       res.status(200).json(data);
     })
   });
@@ -36,8 +54,10 @@ module.exports = (express) => {
   //Finds all the URLS stored
   api.get('/urls', (req, res) => {
     url.find((err) => {
+      suppress('There was an Error: ' + err);
       res.status(500).json(err);
     }, (data) => {
+      suppress('All URLs Found');
       res.status(200).json(data);
     })
   });
@@ -46,8 +66,10 @@ module.exports = (express) => {
   api.get('/urls/:id', (req, res) => {
     req.body.id = req.params.id;
     url.one(req.body, (err)=> {
+      suppress('There was an Error: ' + err);
       res.status(500).json(err);
     }, (data) => {
+      suppress('URL at Id->' + req.body.id + ' was found.');
       res.status(200).json(data);
     })
   });
@@ -77,8 +99,10 @@ module.exports = (express) => {
     req.body.short = short;
 
     url.update(req.body, (err) => {
+      suppress('There was an Error: ' + err);
       res.status(500).json(err);
     }, (data) => {
+      suppress('URL Updated');
       res.status(200).json(data);
     })
   });
@@ -87,8 +111,10 @@ module.exports = (express) => {
   api.delete('/urls/:id', (req, res) => {
     req.body.id = req.params.id;
     url.remove(req.body, (err) => {
+      suppress('There was an Error: ' + err);
       res.status(500).json(err);
     }, (data) => {
+      suppress('URL Deleted');
       res.status(200).json(data);
     })
   });
