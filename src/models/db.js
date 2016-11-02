@@ -22,7 +22,7 @@ const url = sequelize.define('url', {
   url: {
     type: Sequelize.STRING,
   },
-  short: {
+  shortURL: {
     type: Sequelize.STRING,
   },
 });
