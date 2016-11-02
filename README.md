@@ -21,6 +21,17 @@ And once this has been installed, run the command:
 
     nodemon src/server.js
 
+For the database to work, please create a .env file with the following information. NOTE: You will have to fill in the information that fits your information. This is currently being used on a mysql database with a default port of 3306.
+
+    DB_NAME=
+    DB_USER=
+    DB_PASS=
+    DB_HOST=
+    DB_SCHEMA=mysql
+    DB_PORT=3306
+
+    DEBUG=false
+
 ##Endpoints
 The Shortened URL is only shown by the part that would show up after phnx.wd/.
 
@@ -36,3 +47,7 @@ The Shortened URL is only shown by the part that would show up after phnx.wd/.
 | METHOD | ROUTE | OUTCOME |
 | :----: | :------: | :----: |
 | GET | /go/:short | Sends the user to the URL associated with it in the database. |
+
+##Debugging
+
+In order to use the debugging feature, in your .env file, change the value of DEBUG=false to DEBUG=true. This will turn on debugging and output the console message to the console and not into the .log file.
