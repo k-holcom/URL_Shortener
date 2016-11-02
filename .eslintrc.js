@@ -1,3 +1,4 @@
+//This is the config file for eslint
 module.exports = {
     "extends": "airbnb",
     "plugins": [
