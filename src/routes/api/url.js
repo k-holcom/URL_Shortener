@@ -19,9 +19,9 @@ module.exports = (express) => {
   //creates the api
   const api = express.Router();
   //Sends a message stating when each call is started successfully
-  suppress('Started Successfully!')
   //Adds the URL to the Database
   api.post('/url', (req, res) => {
+    suppress('Started Successfully!')
     //This is the variable that will hold the random information that will follow phnx.wd
     var short = '';
 
@@ -53,6 +53,7 @@ module.exports = (express) => {
 
   //Finds all the URLS stored
   api.get('/urls', (req, res) => {
+    suppress('Started Successfully!')
     url.find((err) => {
       suppress('There was an Error: ' + err);
       res.status(500).json(err);
@@ -64,6 +65,7 @@ module.exports = (express) => {
 
   //Find just one URL that has been stored
   api.get('/urls/:id', (req, res) => {
+    suppress('Started Successfully!')
     req.body.id = req.params.id;
     url.one(req.body, (err)=> {
       suppress('There was an Error: ' + err);
@@ -76,6 +78,7 @@ module.exports = (express) => {
 
   //Update a URL
   api.post('/urls/:id', (req, res) => {
+    suppress('Started Successfully!')
     req.body.id = req.params.id;
     //This is the variable that will hold the random information that will follow phnx.wd
     var short = '';
@@ -109,6 +112,7 @@ module.exports = (express) => {
 
   //Deletes the URL Row
   api.delete('/urls/:id', (req, res) => {
+    suppress('Started Successfully!')
     req.body.id = req.params.id;
     url.remove(req.body, (err) => {
       suppress('There was an Error: ' + err);

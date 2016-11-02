@@ -48,6 +48,15 @@ The Shortened URL is only shown by the part that would show up after phnx.wd/.
 | :----: | :------: | :----: |
 | GET | /go/:short | Sends the user to the URL associated with it in the database. |
 
-##Debugging
+##Usage
 
 In order to use the debugging feature, in your .env file, change the value of DEBUG=false to DEBUG=true. This will turn on debugging and output the console message to the console and not into the .log file.
+
+When the debugging is turned off and the messages are output to a .log file, they should look like so:
+
+    2016-11-02T17:51:03.385Z => Shortened URL for www.yahoo.com will be: phnx.wd/YnpIvI
+    2016-11-02T17:53:13.800Z => Started Successfully!
+    2016-11-02T17:53:29.524Z => Shortened URL for www.yahoo.com will be: phnx.wd/CiFbhi
+    2016-11-02T17:53:29.540Z => Shortened URL Added
+    2016-11-02T18:06:42.839Z => Shortened URL for www.testing.com will be: phnx.wd/4tfhww
+    2016-11-02T18:06:42.846Z => Shortened URL Added
