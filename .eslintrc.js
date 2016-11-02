@@ -7,10 +7,16 @@ module.exports = {
   	"rules": {
   		"new-cap": 0,
   		"prefer-template": 0,
-  		"global-require": 0
+  		"global-require": 0,
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": false,
+        }
+      ]
   	},
   	"globals": {
   		"describe": true,
-  		"it": true
+  		"it": true,
     }
 };
