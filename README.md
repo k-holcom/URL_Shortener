@@ -60,8 +60,3 @@ When the debugging is turned off and the messages are output to a .log file, the
     2016-11-02T17:53:29.540Z => Shortened URL Added
     2016-11-02T18:06:42.839Z => Shortened URL for www.testing.com will be: phnx.wd/4tfhww
     2016-11-02T18:06:42.846Z => Shortened URL Added
-
-##Code-Styling
-For this API, I try to follow the AirBnb style guide. This ensures that all files and users use the same code formatting. It also is a guide to help keep things in order and keep everyone on the same page.
-
-For more information, please visit their github repository at https://github.com/airbnb/javascript.

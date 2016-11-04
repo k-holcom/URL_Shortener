@@ -1,6 +1,6 @@
 const db = require('./db.js');
 
-// Find the the row
+//Find the the row
 exports.findOne = (payload, err, success) => {
   db.url.find({
     where: {
@@ -11,4 +11,4 @@ exports.findOne = (payload, err, success) => {
       nested: true,
     }],
   }).then(success).catch(err);
-};
+}
