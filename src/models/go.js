@@ -4,7 +4,7 @@ const db = require('./db.js');
 exports.findOne = (payload, err, success) => {
   db.url.find({
     where: {
-      short: payload.short,
+      short: payload.shortURL,
     },
     include: [{
       all: true,
