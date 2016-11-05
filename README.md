@@ -60,3 +60,6 @@ When the debugging is turned off and the messages are output to a .log file, the
     2016-11-02T17:53:29.540Z => Shortened URL Added
     2016-11-02T18:06:42.839Z => Shortened URL for www.testing.com will be: phnx.wd/4tfhww
     2016-11-02T18:06:42.846Z => Shortened URL Added
+
+###Unit Testing
+The Unit Testing is similar to the Debugging feature. If your DEBUG variable in your .env file is set to true, the unit testing is also turned on.
